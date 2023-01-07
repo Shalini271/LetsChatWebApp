@@ -1,3 +1,7 @@
+user_name = localStorage.getItem("username");
+document.getElementById("user_name").innerHTML="Welcome " + user_name;
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyAKrz2o-s6f39n2E6f4GvcE2VHTvCRY734",
     authDomain: "lcwa-a5027.firebaseapp.com",
@@ -20,7 +24,7 @@ firebase.database().ref("/").on('value', function(snapshot) {document.getElement
 snapshot.forEach(function(childSnapshot) {childKey = childSnapshot.key;
 Room_names = childKey;
 //Start code
-row = "<div onclick='RedirectToRoom(this.id)' class='room_name' id='"+ Room_names + "'>"+ Room_names + "</div><hr>";
+row = "<div onclick='RedirectToRoom(roomid)' class='room_name' id='"+ Room_names + "'>"+ Room_names + "</div><hr>";
 document.getElementById("output").innerHTML+=row;
 //End code
 });});}
