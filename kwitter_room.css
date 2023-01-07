@@ -1,0 +1,21 @@
+#logout
+{
+	font-size: 20px; float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+body
+{
+    text-align: center;
+    background-color:cornsilk;
+}
+
+#room_name{
+    width: 50%;
+    float: center;
+}           
+
+
+
